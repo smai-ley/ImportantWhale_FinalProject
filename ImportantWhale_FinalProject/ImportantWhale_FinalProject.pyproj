@@ -21,13 +21,43 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="decryptionPackage\decryptMovie.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="decryptionPackage\decryptLocation.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="decryptionPackage\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="mainPackage\main.py" />
+    <Compile Include="utilitiesPackage\fileProcessing.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="utilitiesPackage\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="visualizationPackage\visualizationDisplay.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="visualizationPackage\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="mainPackage\__init__.py">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="decryptionPackage\" />
     <Folder Include="mainPackage\" />
+    <Folder Include="dataFiles\" />
+    <Folder Include="utilitiesPackage\" />
+    <Folder Include="visualizationPackage\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="dataFiles\EncryptedGroupHints Fall 2024 Section 001.json" />
+    <Content Include="dataFiles\TeamsAndEncryptedMessagesForDistribution.json" />
+    <Content Include="dataFiles\UCEnglish.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in

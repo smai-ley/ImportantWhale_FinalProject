@@ -10,16 +10,4 @@
 # Citations:
 # Anything else that's relevant:
 
-# main.py
-
-from decryptionPackage import *
-from visualizationPackage import *
-
-if __name__ == "__main__":
-    # Invoke:
-    # decryptLocation function here
-    # decryptMovie function here
-
-    # visualizationDisplay photo call here
-    # decryptLocation message here
-    # decryptMovie message here
+# visualizationDisplay.py
