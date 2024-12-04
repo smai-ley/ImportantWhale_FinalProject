@@ -17,14 +17,6 @@ from utilitiesPackage.fileProcessing import load_json, load_text, validate_team_
 from visualizationPackage import *
 
 if __name__ == "__main__":
-    # Invoke:
-    # decryptLocation function here
-    # decryptMovie function here
-
-    # visualizationDisplay photo call here
-    # decryptLocation message here
-    # decryptMovie message here
-
     # File paths
     location_file = "dataFiles/EncryptedGroupHints Fall 2024 Section 001.json"
     text_file = "dataFiles/UCEnglish.txt"
@@ -48,3 +40,11 @@ if __name__ == "__main__":
     if text_data:
         print("\nPreview of UCEnglish.txt (First 10 lines):")
         print(text_data[:10])
+        
+    # Invoke:
+    # decryptLocation function here
+    # decryptMovie function here
+
+    # visualizationDisplay photo call here
+    # decryptLocation message here
+    # decryptMovie message here
