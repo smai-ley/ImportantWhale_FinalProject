@@ -13,6 +13,7 @@
 # main.py
 
 from decryptionPackage import *
+from decryptionPackage.decryptLocation import decrypt_location
 from utilitiesPackage.fileProcessing import load_json, load_text, validate_team_data
 from visualizationPackage import *
 
@@ -40,7 +41,7 @@ if __name__ == "__main__":
     if text_data:
         print("\nPreview of UCEnglish.txt (First 10 lines):")
         print(text_data[:10])
-        
+
     # Invoke:
     # decryptLocation function here
     # decryptMovie function here
