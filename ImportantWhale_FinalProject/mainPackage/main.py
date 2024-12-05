@@ -15,13 +15,14 @@
 from decryptionPackage import *
 from utilitiesPackage.fileProcessing import load_json, load_text, validate_team_data
 from visualizationPackage import *
+from decryptionPackage.decryptLocation import decrypt_location
 
 if __name__ == "__main__":
     # File paths
     location_file = "dataFiles/EncryptedGroupHints Fall 2024 Section 001.json"
     text_file = "dataFiles/UCEnglish.txt"
     movie_file = "dataFiles/TeamsAndEncryptedMessagesForDistribution.json"
-    team_name = "ImportantWhale"  # Replace with your actual team name
+    team_name = "ImportantWhale"  
 
     # Load JSON files
     location_data = load_json(location_file)
@@ -43,6 +44,16 @@ if __name__ == "__main__":
         
     # Invoke:
     # decryptLocation function here
+    try:
+        decrypted_location = decrypt_location(text_file, location_file, team_name)
+        if decrypted_location:
+            print("\nDecrypted Location:")
+            print(decrypted_location)
+        else:
+            print("\nFailed to decrypt the location. Please check the files and inputs.")
+    except Exception as e:
+         print(f"Error during location decryption: {e}")
+
     # decryptMovie function here
 
     # visualizationDisplay photo call here
