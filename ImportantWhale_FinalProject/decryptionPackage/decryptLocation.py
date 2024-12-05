@@ -11,7 +11,8 @@
 # Anything else that's relevant:
 
 # decryptLocation.py
-import json
+
+from utilitiesPackage.fileProcessing import load_text, load_json, validate_team_data
 
 def decrypt_location(english_file_path, json_file_path, team_name):
     """
@@ -25,30 +26,37 @@ def decrypt_location(english_file_path, json_file_path, team_name):
     Returns:
         str: Decrypted location string, or None if an error occurs.
     """
-    from utilitiesPackage.fileProcessing import load_text, load_json
-
     try:
+        # Load the English words file
         english_lines = load_text(english_file_path)
         if english_lines is None:
             raise ValueError(f"Failed to load the English file: {english_file_path}")
 
+        # Load the JSON file with encrypted indices
         encrypted_data = load_json(json_file_path)
         if encrypted_data is None:
             raise ValueError(f"Failed to load the JSON file: {json_file_path}")
 
-        # Retrieve indices and decrypt the location
+        # Validate that the team name exists in the JSON file
+        if not validate_team_data(encrypted_data, team_name):
+            raise ValueError(f"Team '{team_name}' not found in the JSON file.")
+
+        # Retrieve the indices for the team
         encrypted_indices = encrypted_data[team_name]
-        decrypted_location = []
+
+        # Map each index to the corresponding word in the English file
+        decrypted_words = []
         for index in encrypted_indices:
-            line_number = int(index) - 1  # Convert 1-based index to 0-based index
+            # Convert index from string to integer and adjust for zero-based indexing
+            line_number = int(index) 
             if 0 <= line_number < len(english_lines):
-                # Debugging output
-                print(f"Index {index} -> Line {line_number + 1}: {english_lines[line_number].strip()}")
-                decrypted_location.append(english_lines[line_number])
+                word = english_lines[line_number]
+                print(f"Index {index} -> Word: {word.strip()}")  # Debugging output
+                decrypted_words.append(word.strip())
             else:
                 raise ValueError(f"Index {index} is out of bounds for the English file.")
-
-        return ' '.join(decrypted_location)
+            
+        return ' '.join(decrypted_words)
 
     except ValueError as e:
         print(f"Value error: {e}")
