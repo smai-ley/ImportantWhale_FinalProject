@@ -17,8 +17,6 @@ from decryptionPackage.decryptLocation import decrypt_location
 from decryptionPackage.decryptMovie import decrypt_data
 from visualizationPackage import *
 
-from cryptography.fernet import Fernet
-
 if __name__ == "__main__":
     # File paths
     location_file = "dataFiles/EncryptedGroupHints Fall 2024 Section 001.json"
