@@ -12,18 +12,19 @@
 
 # main.py
 
-from decryptionPackage import *
-from decryptionPackage.decryptLocation import decrypt_location
 from utilitiesPackage.fileProcessing import load_json, load_text, validate_team_data
-from visualizationPackage import *
 from decryptionPackage.decryptLocation import decrypt_location
+from decryptionPackage.decryptMovie import decrypt_data
+from visualizationPackage import *
+
+from cryptography.fernet import Fernet
 
 if __name__ == "__main__":
     # File paths
     location_file = "dataFiles/EncryptedGroupHints Fall 2024 Section 001.json"
     text_file = "dataFiles/UCEnglish.txt"
     movie_file = "dataFiles/TeamsAndEncryptedMessagesForDistribution.json"
-    team_name = "ImportantWhale"  
+    team_name = "CompleteDuck"  
 
     # Load JSON files
     location_data = load_json(location_file)
@@ -56,6 +57,11 @@ if __name__ == "__main__":
          print(f"Error during location decryption: {e}")
 
     # decryptMovie function here
+    encrypted_movie = movie_data[team_name][0] # Storing encryption string to variable
+    key = b"WVRqW7wUIQ1mgbz5PAonHGJn-XknVdDV74L_RNFjU0o="
+    decrypted_data = decrypt_data(encrypted_movie, key)
+    print(decrypted_data)
+
 
     # visualizationDisplay photo call here
     # decryptLocation message here

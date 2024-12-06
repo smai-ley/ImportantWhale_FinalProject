@@ -7,7 +7,7 @@
 # Brief Description of the assignment:  
 # Brief Description of what this module does: This file processes the data from dataFiles, and returns the outputs to be processed by
 # decryptLocation and decryptMovie
-# Citations:
+# Citations: ChatGPT
 # Anything else that's relevant:
 
 # fileProcessing.py
