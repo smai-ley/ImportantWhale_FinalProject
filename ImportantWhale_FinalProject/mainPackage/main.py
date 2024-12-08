@@ -22,7 +22,7 @@ if __name__ == "__main__":
     location_file = "dataFiles/EncryptedGroupHints Fall 2024 Section 001.json"
     text_file = "dataFiles/UCEnglish.txt"
     movie_file = "dataFiles/TeamsAndEncryptedMessagesForDistribution.json"
-    team_name = "CompleteDuck"  
+    team_name = "ImportantWhale"  
 
     # Load JSON files
     location_data = load_json(location_file)
@@ -56,7 +56,7 @@ if __name__ == "__main__":
 
     # decryptMovie function here
     encrypted_movie = movie_data[team_name][0] # Storing encryption string to variable
-    key = b"WVRqW7wUIQ1mgbz5PAonHGJn-XknVdDV74L_RNFjU0o="
+    key = b"7oH0eeFlGBz-3KzT8ZZAeq6e0yoXKG_Fhvelbj4W4iI="
     decrypted_data = decrypt_data(encrypted_movie, key)
     print(decrypted_data)
 
