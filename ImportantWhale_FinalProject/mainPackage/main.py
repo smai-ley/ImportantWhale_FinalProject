@@ -58,9 +58,8 @@ if __name__ == "__main__":
     encrypted_movie = movie_data[team_name][0] # Storing encryption string to variable
     key = b"7oH0eeFlGBz-3KzT8ZZAeq6e0yoXKG_Fhvelbj4W4iI="
     decrypted_data = decrypt_data(encrypted_movie, key)
+    print("\nDecrypted Movie:")
     print(decrypted_data)
 
 
     # visualizationDisplay photo call here
-    # decryptLocation message here
-    # decryptMovie message here
