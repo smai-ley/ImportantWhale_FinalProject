@@ -16,6 +16,7 @@ from utilitiesPackage.fileProcessing import load_json, load_text, validate_team_
 from decryptionPackage.decryptLocation import decrypt_location
 from decryptionPackage.decryptMovie import decrypt_data
 from visualizationPackage import *
+from visualizationPackage import visualizationDisplay
 
 if __name__ == "__main__":
     # File paths
@@ -63,3 +64,5 @@ if __name__ == "__main__":
 
 
     # visualizationDisplay photo call here
+    visualizationDisplay()
+
