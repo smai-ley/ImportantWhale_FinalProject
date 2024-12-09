@@ -11,3 +11,16 @@
 # Anything else that's relevant:
 
 # visualizationDisplay.py
+
+
+def visualizationDisplay():
+    import matplotlib.pyplot as plt
+    import matplotlib.image as mpimg
+
+    # Load an image from a file
+    img = mpimg.imread('datafiles/groupPicture.jpeg')
+
+    # Display the image
+    plt.imshow(img)
+    plt.axis('off')  # Hide axes
+    plt.show()
