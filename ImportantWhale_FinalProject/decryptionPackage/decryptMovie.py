@@ -4,10 +4,10 @@
 # Due Date: 12/10/24 7:00AM
 # Course #/Section:   IS4010 001
 # Semester/Year:   Fall 2024
-# Brief Description of the assignment:  
+# Brief Description of the assignment: Decrypt information, use information to make assignment requirements, take selfie and display
 
-# Brief Description of what this module does:
-# Citations:
+# Brief Description of what this module does: Contains the function to perform fernet decryption with encrypted data bit string and aes key
+# Citations: Copilot, Gemini
 # Anything else that's relevant:
 
 # decryptMovie.py

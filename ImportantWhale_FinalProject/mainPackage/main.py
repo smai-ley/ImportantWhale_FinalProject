@@ -4,10 +4,10 @@
 # Due Date: 12/10/24 7:00AM
 # Course #/Section:   IS4010 001
 # Semester/Year:   Fall 2024
-# Brief Description of the assignment:  
+# Brief Description of the assignment: Decrypt information, use information to make assignment requirements, take selfie and display
 
-# Brief Description of what this module does:
-# Citations:
+# Brief Description of what this module does: performs the invocations for each module
+# Citations: Copilot, Gemini
 # Anything else that's relevant:
 
 # main.py
@@ -15,8 +15,7 @@
 from utilitiesPackage.fileProcessing import load_json, load_text, validate_team_data
 from decryptionPackage.decryptLocation import decrypt_location
 from decryptionPackage.decryptMovie import decrypt_data
-from visualizationPackage import *
-from visualizationPackage import visualizationDisplay
+from visualizationPackage.visualizationDisplay import displayImage
 
 if __name__ == "__main__":
     # File paths
@@ -64,5 +63,5 @@ if __name__ == "__main__":
 
 
     # visualizationDisplay photo call here
-    visualizationDisplay()
+    displayImage()
 

@@ -4,9 +4,9 @@
 # Due Date: 12/10/24 7:00AM
 # Course #/Section:   IS4010 001
 # Semester/Year:   Fall 2024
-# Brief Description of the assignment:  
+# Brief Description of the assignment: Decrypt information, use information to make assignment requirements, take selfie and display
 
-# Brief Description of what this module does:
+# Brief Description of what this module does: Uses data from fileProcessing to perform decryption for location requirement, outputs results
 # Citations: ChatGPT
 # Anything else that's relevant:
 

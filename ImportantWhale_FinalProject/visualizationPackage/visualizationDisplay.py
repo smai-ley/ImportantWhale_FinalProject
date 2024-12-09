@@ -4,23 +4,24 @@
 # Due Date: 12/10/24 7:00AM
 # Course #/Section:   IS4010 001
 # Semester/Year:   Fall 2024
-# Brief Description of the assignment:  
+# Brief Description of the assignment: Decrypt information, use information to make assignment requirements, take selfie and display
 
-# Brief Description of what this module does:
-# Citations:
+# Brief Description of what this module does: Loads an image from dataFiles and displays usiung matplotlib
+# Citations: Copilot, Gemini
 # Anything else that's relevant:
 
 # visualizationDisplay.py
 
+import matplotlib.pyplot as plt
 
-def visualizationDisplay():
-    import matplotlib.pyplot as plt
-    import matplotlib.image as mpimg
+def displayImage():
+    """
+    Displays an image in dataFiles
+    @param none
+    """
+    img = plt.imread("dataFiles/groupPicture.jpeg")
 
-    # Load an image from a file
-    img = mpimg.imread('datafiles/groupPicture.jpeg')
-
-    # Display the image
     plt.imshow(img)
-    plt.axis('off')  # Hide axes
+    plt.title("Wow! Look at these AMAZING UC Students!")
+    plt.axis('off')  # Hide axis ticks
     plt.show()
